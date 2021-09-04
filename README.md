@@ -48,3 +48,6 @@ npx tailwindcss init -p
 #4
 npm i --dev typescript @types/react
 ```
+
+## Links
+[Tailwindcss](https://tailwindcss.com/docs/guides/nextjs)
