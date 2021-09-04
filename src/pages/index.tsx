@@ -1,5 +1,6 @@
 import Tarefa from "../model/Tarefa";
 import tarefasIniciais from '../data/mock';
+import Selecao from '../components/lista/Selecao';
 
 export default function Home() {
 
@@ -33,11 +34,13 @@ export default function Home() {
       items-center
       text-white
       bg-gradient-to-tr
-      from-purple-500
-      to-yellow-600
+      from-gray-600
+      to-gray-900
       h-screen
     `}>
-      {renderizarTarefas()}
+      {/* {renderizarTarefas()} */}
+      <Selecao valor={true}/>
+      <Selecao valor={false}/>
     </div>
   )
 }
