@@ -9,10 +9,8 @@ export default function Selecao(props: SelecaoProps) {
   return (
     <div className={`
       flex justify-center items-center
-      h-7
-      w-7
-      rounded-full
-      border border-gray-400
+      h-7 w-7 text-white
+      rounded-full border border-gray-400
       cursor-pointer ${gradient}
     `}>
       {props.valor ? 'X' : ''}
