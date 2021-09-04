@@ -8,8 +8,11 @@ export default function Home() {
   tarefas = tarefas.filtrarAtivas()
   tarefas = tarefas.removerFiltro()
 
-  // const tarefa: Tarefa = new Tarefa(1, 'Exemplo de tarefa')
-  // tarefa.concluir()
+  tarefas = tarefas.adicionarTarefa(Tarefa.criarAtiva(4, 'Lavar Pratos'))
+  tarefas = tarefas.adicionarTarefa(Tarefa.criarConcluida(5, 'Cuidar das crianças'))
+  tarefas = tarefas.excluirConcluidas()
+
+  tarefas = tarefas.modificarTarefa(tarefas.itens[2].alterarStatus())
 
   function renderizarTarefas() {
     return tarefas.itens.map(tarefa => {
