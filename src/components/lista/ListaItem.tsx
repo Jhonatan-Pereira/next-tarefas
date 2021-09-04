@@ -14,7 +14,7 @@ export default function ListItem(props: ListaItemProps) {
   return (
     <li onClick={props.alterarStatus} className={`
       flex items-center
-      bg-white text-black
+      text-black
       p-5 border-b border-gray-400
       text-xl cursor-pointer
     `}>

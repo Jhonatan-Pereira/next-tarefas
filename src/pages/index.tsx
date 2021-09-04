@@ -2,31 +2,35 @@ import Tarefa from "../model/Tarefa";
 import tarefasIniciais from '../data/mock';
 import Selecao from '../components/lista/Selecao';
 import ListaItem from '../components/lista/ListaItem';
+import Lista from '../components/lista/Lista';
+import { useState } from "react";
 
 export default function Home() {
 
-  let tarefas = tarefasIniciais
-  tarefas = tarefas.filtrarConcluidas()
-  tarefas = tarefas.filtrarAtivas()
-  tarefas = tarefas.removerFiltro()
+  const [tarefas, setTarefas] = useState(tarefasIniciais)
 
-  tarefas = tarefas.adicionarTarefa(Tarefa.criarAtiva(4, 'Lavar Pratos'))
-  tarefas = tarefas.adicionarTarefa(Tarefa.criarConcluida(5, 'Cuidar das crianças'))
-  tarefas = tarefas.excluirConcluidas()
+  // let tarefas = tarefasIniciais
+  // tarefas = tarefas.filtrarConcluidas()
+  // tarefas = tarefas.filtrarAtivas()
+  // tarefas = tarefas.removerFiltro()
 
-  tarefas = tarefas.modificarTarefa(tarefas.itens[2].alterarStatus())
+  // tarefas = tarefas.adicionarTarefa(Tarefa.criarAtiva(4, 'Lavar Pratos'))
+  // tarefas = tarefas.adicionarTarefa(Tarefa.criarConcluida(5, 'Cuidar das crianças'))
+  // tarefas = tarefas.excluirConcluidas()
 
-  function renderizarTarefas() {
-    return tarefas.itens.map(tarefa => {
-      return (
-        <div key={tarefa.id}>
-          <span>{tarefa.id}</span>
-          <span>{tarefa.descricao}</span>
-          <span>{tarefa.concluida ? 'Concluída' : 'Ativa'}</span>
-        </div>
-      )
-    })
-  }
+  // tarefas = tarefas.modificarTarefa(tarefas.itens[2].alterarStatus())
+
+  // function renderizarTarefas() {
+  //   return tarefas.itens.map(tarefa => {
+  //     return (
+  //       <div key={tarefa.id}>
+  //         <span>{tarefa.id}</span>
+  //         <span>{tarefa.descricao}</span>
+  //         <span>{tarefa.concluida ? 'Concluída' : 'Ativa'}</span>
+  //       </div>
+  //     )
+  //   })
+  // }
 
   return (
     <div className={`
@@ -40,12 +44,15 @@ export default function Home() {
       h-screen
     `}>
       {/* {renderizarTarefas()} */}
-      <ul>
+      {/* <ul>
         <ListaItem valor="Exemplo de item #1" concluido={false} 
           alterarStatus={() => {}}/>
         <ListaItem valor="Exemplo de item #2" concluido={true} 
           alterarStatus={() => {}}/>
-      </ul>
+      </ul> */}
+      <Lista tarefas={tarefas} mudou={(novasTarefas) => {
+        setTarefas(novasTarefas)
+      }}/>
     </div>
   )
 }
