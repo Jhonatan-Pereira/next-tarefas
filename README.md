@@ -54,3 +54,10 @@ npm i --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons
 
 ## Links
 [Tailwindcss](https://tailwindcss.com/docs/guides/nextjs)
+
+## Sobre
+Este projeto foi desenvolvido através do curso [Next.js & React - Curso Completo - Totalmente Baseado em Projetos](https://www.cod3r.com.br/courses/nextjs) ministrado por [Leonardo Leitão](https://www.udemy.com/user/leonardomouraleitao/).
+
+![Viewport do Projeto][viewport1]
+
+[viewport1]: https://github.com/Jhonatan-Pereira/next-tarefas/blob/main/images/viewport1.png "Viewport 1"
