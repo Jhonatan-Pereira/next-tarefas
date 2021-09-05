@@ -31,7 +31,7 @@ export default function Lista(props: ListaProps) {
 
   return (
     <div className={`
-      flex w-3/5
+      flex w-3/5 items-start
     `}>
       <ul className={`
         w-full list-none

@@ -37,12 +37,12 @@ export default function ListaRodape(props: ListaRodapeProps) {
         </ListaBotao>
         <ListaBotao
           className="mx-4"
-          onClick={() => mudou(tarefas.removerFiltro())}
+          onClick={() => mudou(tarefas.filtrarAtivas())}
           selecionado={tarefas.exibindoSomenteAtivas()}>
           Ativas
         </ListaBotao>
         <ListaBotao
-          onClick={() => mudou(tarefas.removerFiltro())}
+          onClick={() => mudou(tarefas.filtrarConcluidas())}
           selecionado={tarefas.exibindoSomenteConcluidas()}>
           Concluídas
         </ListaBotao>
