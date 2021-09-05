@@ -47,6 +47,9 @@ npx tailwindcss init -p
 
 #4
 npm i --dev typescript @types/react
+
+#5
+npm i --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
 ```
 
 ## Links
